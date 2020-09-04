@@ -23,6 +23,6 @@ import './keycloak-oauth2';
 
 <%_ if (authenticationType === 'session') { _%>
 Cypress.Cookies.defaults({
-preserve: ['XSRF-TOKEN','SESSION']
+preserve: ['XSRF-TOKEN','SESSION', 'JSESSIONID']
 })
 <%_ } _%>
