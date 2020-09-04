@@ -16,6 +16,14 @@
 import './commands';
 import './navbar';
 import './entity';
+
+<%_ if (authenticationType === 'session') { _%>
+Cypress.Cookies.defaults({
+preserve: ['XSRF-TOKEN','SESSION']
+})
+<%_ } _%>
+
+
 <%_ if (authenticationType === 'oauth2') { _%>
 import './keycloak-oauth2';
 <%_ } _%>
