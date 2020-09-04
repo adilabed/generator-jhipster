@@ -223,7 +223,6 @@ jobs:
                   # Verify if the generated source has changed
                   git add .
                   git -c color.ui=always diff -R --cached --exit-code -- . ':!package-lock.json' ':!src/main/resources/config/tls/keystore.p12' || echo "::set-output name=has-changes::true"
-
             #----------------------------------------------------------------------
             # Launch tests
             #----------------------------------------------------------------------
